@@ -1,8 +1,4 @@
 import time
-import typer
-
-app = typer.Typer()
-
 
 def get_input():
     default_time = 25
@@ -31,13 +27,3 @@ def display_time(timer):
         minutes = int(x / 60) %60
         print(f"00:{minutes:02}:{seconds:02}")
         time.sleep(1)
-
-
-
-@app.command()
-def start_timer():
-    display_time(get_input())
-
-
-if __name__ == "__main__":
-    app()
